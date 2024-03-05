@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="news_categories">
+        <item>business</item>
+        <item>entertainment</item>
+        <item>general</item>
+        <item>health</item>
+        <item>science</item>
+        <item>sports</item>
+        <item>technology</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">ZuizzSaeed-NewsApp</string>

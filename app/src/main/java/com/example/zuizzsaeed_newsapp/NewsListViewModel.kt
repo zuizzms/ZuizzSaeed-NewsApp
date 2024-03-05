@@ -13,11 +13,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class NewsListViewModel : ViewModel() {
 
-    // LiveData for observing articles
     private val _articles = MutableLiveData<List<Article>>()
     val articles: LiveData<List<Article>> = _articles
 
-    // Retrofit setup (consider moving this to a repository class in a real app)
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://newsapi.org/") // Ensure this is your base URL
         .addConverterFactory(GsonConverterFactory.create())
@@ -25,7 +23,6 @@ class NewsListViewModel : ViewModel() {
 
     private val apiService = retrofit.create(NewsApiService::class.java)
 
-    // Function to fetch news articles based on category
     fun fetchNewsArticles(category: String) {
         val call = apiService.getTopHeadlines(country = "us", category = category)
         call.enqueue(object : Callback<News> {

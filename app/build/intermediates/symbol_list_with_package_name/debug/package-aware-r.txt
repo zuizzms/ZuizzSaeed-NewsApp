@@ -77,6 +77,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array news_categories
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider
@@ -3185,6 +3186,7 @@ id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
+id category_spinner
 id center
 id centerCrop
 id centerInside
