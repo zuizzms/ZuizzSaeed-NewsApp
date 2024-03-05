@@ -11,9 +11,7 @@ id article_published_at
 id article_title
 id category_spinner
 id fragment_container
-id news_description
 id news_recycler_view
-id news_title
 layout activity_main
 layout fragment_news_detail
 layout fragment_news_list

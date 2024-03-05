@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.zuizzsaeed_newsapp-mergeDebugResources-32:/values-es-rUS/values-es-rUS.xml",
+            "outputFile": "com.example.zuizzsaeed_newsapp-mergeDebugResources-37:/values-es-rUS/values-es-rUS.xml",
             "map": [
                 {
                     "source": "C:\\Users\\zuizz\\.gradle\\caches\\transforms-3\\d1e4a685b1001794fbcfe4ee9c157a7e\\transformed\\core-1.12.0\\res\\values-es-rUS\\values-es-rUS.xml",

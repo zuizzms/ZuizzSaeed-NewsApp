@@ -3220,6 +3220,7 @@ int id currentState 0x7f09008a
 int id custom 0x7f09008b
 int id customPanel 0x7f09008c
 int id cut 0x7f09008d
+int id dataBinding 0x7f0901fb
 int id date_picker_actions 0x7f09008e
 int id decelerate 0x7f09008f
 int id decelerateAndComplete 0x7f090090
@@ -3310,7 +3311,6 @@ int id indeterminate 0x7f0900e4
 int id info 0x7f0900e5
 int id invisible 0x7f0900e6
 int id inward 0x7f0900e7
-int id is_pooling_container_tag 0x7f0900e8
 int id italic 0x7f0900e9
 int id item_touch_helper_previous_elevation 0x7f0900ea
 int id jumpToEnd 0x7f0900eb
@@ -3395,9 +3395,7 @@ int id navigation_header_container 0x7f090139
 int id never 0x7f09013a
 int id neverCompleteToEnd 0x7f09013b
 int id neverCompleteToStart 0x7f09013c
-int id news_description 0x7f09013d
 int id news_recycler_view 0x7f09013e
-int id news_title 0x7f09013f
 int id noScroll 0x7f090140
 int id noState 0x7f090141
 int id none 0x7f090142
@@ -3408,6 +3406,8 @@ int id notification_main_column 0x7f090146
 int id notification_main_column_container 0x7f090147
 int id off 0x7f090148
 int id on 0x7f090149
+int id onAttachStateChangeListener 0x7f0901fc
+int id onDateChanged 0x7f0901fd
 int id onInterceptTouchReturnSwipe 0x7f09014a
 int id open_search_bar_text_view 0x7f09014b
 int id open_search_view_background 0x7f09014c
@@ -3438,7 +3438,6 @@ int id pathRelative 0x7f090164
 int id peekHeight 0x7f090165
 int id percent 0x7f090166
 int id pin 0x7f090167
-int id pooling_container_listener_holder_tag 0x7f090168
 int id position 0x7f090169
 int id postLayout 0x7f09016a
 int id pressed 0x7f09016b
@@ -3537,6 +3536,7 @@ int id textSpacerNoButtons 0x7f0901c7
 int id textSpacerNoTitle 0x7f0901c8
 int id textStart 0x7f0901c9
 int id textTop 0x7f0901ca
+int id textWatcher 0x7f0901fe
 int id text_input_end_icon 0x7f0901cb
 int id text_input_error_icon 0x7f0901cc
 int id text_input_start_icon 0x7f0901cd

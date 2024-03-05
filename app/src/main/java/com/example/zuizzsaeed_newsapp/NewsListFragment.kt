@@ -1,32 +1,44 @@
 package com.example.zuizzsaeed_newsapp
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.zuizzsaeed_newsapp.Article
+import com.example.zuizzsaeed_newsapp.NewsDetailFragment
+import com.example.zuizzsaeed_newsapp.NewsListAdapter
+import com.example.zuizzsaeed_newsapp.R
+import com.example.zuizzsaeed_newsapp.databinding.FragmentNewsListBinding
+import com.example.zuizzsaeed_newsapp.NewsListViewModel
 
 class NewsListFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: NewsListAdapter
+    private val viewModel: NewsListViewModel by viewModels()
+    private lateinit var binding: FragmentNewsListBinding
+    private lateinit var newsListAdapter: NewsListAdapter
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_news_list, container, false)
-        recyclerView = view.findViewById(R.id.news_recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = NewsListAdapter()
-        recyclerView.adapter = adapter
-        return view
+    ): View {
+        binding = FragmentNewsListBinding.inflate(inflater, container, false)
+        binding?.newsRecyclerView?.layoutManager = LinearLayoutManager(context)
+        // newsListAdapter = NewsListAdapter(emptyList(), this::onArticleClicked)
+        binding?.newsRecyclerView?.adapter = newsListAdapter
+
+        return binding!!.root
     }
 
-    // Add a method to update news data in the adapter if needed
-    fun updateNewsData(newsList: List<Article>) {
-        adapter.submitList(newsList)
-    }
 }
+
+

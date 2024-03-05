@@ -1,3 +1,4 @@
+package com.example.zuizzsaeed_newsapp
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,35 +11,34 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.Date
+import java.util.UUID
 
 class NewsListViewModel : ViewModel() {
 
-    private val _articles = MutableLiveData<List<Article>>()
-    val articles: LiveData<List<Article>> = _articles
+    private val articles = mutableListOf<Article>()
+    private val source = Source(id = "source_id", name = "Test Source")
+    private val author = "author!"
+    private val title = "title!"
+    private val description = "description!"
+    private val url = "url!"
+    private val urlToImage = "urlToImage!"
+    private val publishedAt = "publishedAt!"
+    private val content = "content!"
+    init {
+        for (i in 0 until 100) {
+            val article = Article(
+                source = source,
+                author = author,
+                title = title,
+                description = description,
+                url = url,
+                urlToImage = urlToImage,
+                publishedAt = publishedAt,
+                content = content
+            )
 
-    private val retrofit = Retrofit.Builder()
-        .baseUrl("https://newsapi.org/") // Ensure this is your base URL
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-
-    private val apiService = retrofit.create(NewsApiService::class.java)
-
-    fun fetchNewsArticles(category: String) {
-        val call = apiService.getTopHeadlines(country = "us", category = category)
-        call.enqueue(object : Callback<News> {
-            override fun onResponse(call: Call<News>, response: Response<News>) {
-                if (response.isSuccessful) {
-                    _articles.value = response.body()?.articles
-                } else {
-                    // Handle API error response
-                    Log.d("API Error", "Server Response Error: ${response.errorBody()?.string()}")
-                }
-            }
-
-            override fun onFailure(call: Call<News>, t: Throwable) {
-                // Log or handle API call failure
-                Log.d("API Call Failure", "Call Failed: ${t.message}")
-            }
-        })
+            articles += article
+        }
     }
-}
+    }
