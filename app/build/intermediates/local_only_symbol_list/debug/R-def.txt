@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id article_author
+id article_description
+id article_published_at
+id article_title
+id fragment_container
+id news_description
+id news_recycler_view
+id news_title
+layout activity_main
+layout fragment_news_detail
+layout fragment_news_list
+layout list_item
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.ZuizzSaeedNewsApp
+style Theme.ZuizzSaeedNewsApp
+xml backup_rules
+xml data_extraction_rules
