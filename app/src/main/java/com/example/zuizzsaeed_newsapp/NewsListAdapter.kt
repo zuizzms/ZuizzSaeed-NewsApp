@@ -33,7 +33,7 @@ class NewsListAdapter(
         viewType: Int
     ): ArticleHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = ListItemNewsBinding.inflate(inflater, parent, false)
+        val binding = ListItemBinding.inflate(inflater, parent, false)
         return ArticleHolder(binding)
     }
 
